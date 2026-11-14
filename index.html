@@ -15,6 +15,7 @@
   main { max-width:760px; margin:0 auto; padding:1rem; }
   section { background:var(--card); border-radius:12px; padding:1.25rem; margin:1rem 0; box-shadow:0 1px 4px rgba(0,0,0,.08); }
   h2 { margin-top:0; color:var(--accent); font-size:1.25rem; }
+  h3 { font-size:1.05rem; margin:1.25rem 0 .25rem; }
   .big { font-size:1.15rem; }
   ul { padding-left:1.2rem; }
   li { margin:.35rem 0; }
@@ -24,6 +25,12 @@
   .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:.55rem 1rem; border-radius:8px; font-weight:600; }
   .btn:hover { opacity:.9; }
   .note { color:var(--muted); font-size:.9rem; }
+  table { width:100%; border-collapse:collapse; margin:.5rem 0; font-size:.95rem; }
+  th, td { text-align:left; padding:.45rem .5rem; border-bottom:1px solid #eee; }
+  th { color:var(--muted); font-weight:600; }
+  td.num, th.num { text-align:right; white-space:nowrap; }
+  tr.total td { font-weight:700; border-bottom:none; }
+  .ok { color:#2b8a3e; font-weight:600; }
   footer { text-align:center; color:var(--muted); font-size:.85rem; padding:1.5rem 1rem 2rem; }
 </style>
 </head>
@@ -46,6 +53,21 @@
 </section>
 
 <section>
+  <h2>Stagione e pause del gestore</h2>
+  <p>L'anno sportivo degli impianti comunali va da <strong>giovedì 24 settembre 2026</strong> a <strong>lunedì 31 maggio 2027</strong>. Il nostro gruppo ha in assegnazione la palestra dal <strong>29 settembre 2026</strong> al <strong>25 maggio 2027</strong>, ogni martedì dalle 21:00 alle 22:30 (1 ora e 30 minuti).</p>
+  <p>Sospensioni dell'attività per festività, non conteggiate:</p>
+  <ul>
+    <li>domenica 1 novembre 2026</li>
+    <li>martedì 8 dicembre 2026</li>
+    <li>da giovedì 24 dicembre 2026 a mercoledì 6 gennaio 2027 (pausa natalizia)</li>
+    <li>da giovedì 25 marzo a martedì 30 marzo 2027 (pausa pasquale)</li>
+    <li>domenica 25 aprile 2027</li>
+    <li>sabato 1 maggio 2027</li>
+  </ul>
+  <p class="note">Eventuali variazioni vengono comunicate dal gestore in tempo utile.</p>
+</section>
+
+<section>
   <h2>Calendario degli allenamenti</h2>
   <ul class="dates">
     <li>Mar 29/09</li><li>Mar 06/10</li><li>Mar 13/10</li><li>Mar 20/10</li><li>Mar 27/10</li>
@@ -58,6 +80,27 @@
     <li>Mar 04/05</li><li>Mar 11/05</li><li>Mar 18/05</li><li>Mar 25/05</li>
   </ul>
   <p class="note">Le date barrate sono le pause per festività: 8 dicembre, pausa natalizia (24/12 – 06/01) e pausa pasquale (25 – 30/03). Eventuali variazioni del gestore verranno comunicate in tempo utile.</p>
+</section>
+
+<section>
+  <h2>Costi della palestra</h2>
+  <p>Il gruppo paga a Reno Sportiva SRL un forfait per l'intera stagione, comprensivo di tariffa d'uso e pulizie.</p>
+  <table>
+    <tr><th>Voce</th><th class="num">Importo</th></tr>
+    <tr><td>Tariffa d'uso (all'ora)</td><td class="num">€ 23,76</td></tr>
+    <tr><td>Pulizie (all'ora)</td><td class="num">€ 4,40</td></tr>
+    <tr><td>Costo per allenamento (1 h 30)</td><td class="num">€ 42,24</td></tr>
+    <tr><td>Allenamenti conteggiati</td><td class="num">31</td></tr>
+    <tr class="total"><td>Totale stagione</td><td class="num">€ 1.309,44</td></tr>
+  </table>
+  <table>
+    <tr><th>Rata</th><th>Scadenza</th><th class="num">Importo</th></tr>
+    <tr><td>1ª rata</td><td>15 novembre 2026</td><td class="num">€ 654,72</td></tr>
+    <tr><td>2ª rata</td><td>28 febbraio 2027</td><td class="num">€ 654,72</td></tr>
+  </table>
+  <p>🔒 IBAN, stato dei pagamenti e quote dei soci sono nell'<a href="riservata.html">area riservata</a> (serve la password).</p>
+  <p class="note">Il pagamento avviene solo tramite bonifico. Se una rata non viene pagata entro la scadenza, l'assegnazione della palestra decade. Partite, allenamenti supplementari o manifestazioni extra forfait si pagano a parte, in due rate: entro il 30 giugno 2027 (settembre 2026 – maggio 2027) ed entro il 30 settembre 2027 (giugno – agosto 2027).</p>
+  <p class="note">In caso di rinuncia agli spazi dopo l'assegnazione definitiva, il gestore richiede il 70% della tariffa se la rinuncia arriva entro il 15 ottobre e il 100% dopo quella data. Il pagamento è annullato se lo spazio viene riassegnato ad altri.</p>
 </section>
 
 <section>
@@ -74,20 +117,41 @@
     <li>L'accesso è riservato a chi partecipa all'attività, in presenza del responsabile del gruppo.</li>
     <li>Segnala subito (al massimo entro il giorno dopo) qualsiasi danno o incidente al responsabile del gruppo.</li>
     <li>Chi chiude per ultimo controlla rubinetti, docce, finestre, porte e luci.</li>
+    <li>Il tempo per spogliatoi e docce è compreso nell'orario assegnato.</li>
+    <li>I detersivi e i materiali pericolosi vanno riposti negli appositi armadi chiusi a chiave.</li>
+    <li>Nella palestra si svolgono solo attività sportive autorizzate dall'Amministrazione Comunale. Le gare ufficiali richiedono impianti omologati o una deroga del gestore.</li>
+  </ul>
+
+  <h3>Cosa succede se le regole non vengono rispettate</h3>
+  <ul>
+    <li>La prima e la seconda violazione portano a un'ammonizione via email da parte del gestore. Le violazioni successive possono portare alla sospensione o alla revoca dell'uso della palestra.</li>
+    <li>I danni a impianto o attrezzature, e le pulizie straordinarie, vengono addebitati al gruppo, da pagare entro 30 giorni dalla nota di addebito.</li>
+    <li>Se non è possibile individuare i responsabili, il costo è ripartito tra tutte le società che hanno usato l'impianto quel giorno.</li>
   </ul>
 </section>
 
 <section>
-  <h2>Sicurezza</h2>
+  <h2>Sicurezza e assicurazione</h2>
   <ul>
-    <li>Durante gli allenamenti è presente almeno una persona abilitata all'uso del defibrillatore (BLS/D).</li>
+    <li>Durante gli allenamenti è presente almeno una persona abilitata all'uso del defibrillatore (BLS/D), come richiesto dai decreti del Ministero della Salute del 24/04/2013 e del 26/06/2017.</li>
     <li>È disponibile una cassetta di primo soccorso.</li>
+    <li>Il gruppo ha un responsabile della sicurezza, comunicato al gestore, che adotta le misure previste dal piano di valutazione dei rischi dell'impianto e le fa conoscere ai partecipanti (D.Lgs. 81/2008).</li>
+    <li>Il gruppo è tenuto a stipulare una polizza di responsabilità civile per danni a cose e persone durante l'uso della palestra e delle attrezzature.</li>
+    <li>Per le attività fuori dall'impianto, ad esempio il trasporto collettivo, valgono le norme generali di sicurezza sul lavoro.</li>
   </ul>
 </section>
 
 <section>
   <h2>Il gestore dell'impianto</h2>
-  <p>Reno Sportiva SRL · Via Nino Bixio 12, Casalecchio di Reno (BO) · <a href="mailto:info@renosportiva.it">info@renosportiva.it</a></p>
+  <p>Reno Sportiva SRL · Via Nino Bixio 12, 40033 Casalecchio di Reno (BO)<br>
+  Tel. <a href="tel:+393920254526">392 0254526</a> · <a href="mailto:info@renosportiva.it">info@renosportiva.it</a><br>
+  P.IVA e C.F. 03780171207</p>
+  <p class="note">Reno Sportiva è il concessionario-gestore degli impianti sportivi comunali di Casalecchio di Reno. Le regole di utilizzo sono nella convenzione 2026/2027 e nei regolamenti comunali affissi in ogni impianto.</p>
+</section>
+
+<section>
+  <h2>Privacy</h2>
+  <p class="note">I dati del gruppo e del suo referente sono trattati da Reno Sportiva SRL solo per la gestione amministrativo-contabile e il rapporto con l'istituto assicurativo, ai sensi degli artt. 13 e 14 del GDPR 2016/679. I dati sono conservati per non oltre 10 anni. Per esercitare i diritti previsti dagli artt. 15-20 del GDPR si scrive a <a href="mailto:info@renosportiva.it">info@renosportiva.it</a>.</p>
 </section>
 
 </main>

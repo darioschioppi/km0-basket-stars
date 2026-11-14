@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Area riservata – KM0 Basket Stars</title>
+<style>
+  :root { --accent:#e8590c; --bg:#fafafa; --card:#fff; --text:#222; --muted:#666; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+  header { background:var(--accent); color:#fff; padding:2rem 1rem; text-align:center; }
+  header h1 { margin:0 0 .25rem; font-size:1.8rem; }
+  header p { margin:0; opacity:.9; }
+  main { max-width:760px; margin:0 auto; padding:1rem; }
+  section { background:var(--card); border-radius:12px; padding:1.25rem; margin:1rem 0; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+  h2 { margin-top:0; color:var(--accent); font-size:1.25rem; }
+  .note { color:var(--muted); font-size:.9rem; }
+  table { width:100%; border-collapse:collapse; margin:.5rem 0; font-size:.95rem; }
+  th, td { text-align:left; padding:.45rem .5rem; border-bottom:1px solid #eee; vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  td.num, th.num { text-align:right; white-space:nowrap; }
+  tr.total td { font-weight:700; border-bottom:none; }
+  .ok { color:#2b8a3e; font-weight:600; }
+  form { display:flex; gap:.5rem; flex-wrap:wrap; }
+  input[type=password] { flex:1; min-width:180px; padding:.6rem .75rem; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
+  button { background:var(--accent); color:#fff; border:0; padding:.6rem 1.1rem; border-radius:8px; font-weight:600; font-size:1rem; cursor:pointer; }
+  button:hover { opacity:.9; }
+  #err { color:#c92a2a; margin:.5rem 0 0; min-height:1.2em; }
+  a { color:var(--accent); }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:1.5rem 1rem 2rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔒 Area riservata</h1>
+  <p>KM0 Basket Stars · Stagione 2026/2027</p>
+</header>
+<main>
+  <section id="gate">
+    <h2>Inserisci la password</h2>
+    <p class="note">Questa pagina contiene dati di pagamento e quote dei soci, riservati ai partecipanti.</p>
+    <form id="f">
+      <input type="password" id="pw" placeholder="Password" autocomplete="current-password" autofocus required>
+      <button type="submit">Entra</button>
+    </form>
+    <p id="err"></p>
+  </section>
+  <div id="content"></div>
+  <p><a href="./">← Torna alle info generali</a></p>
+</main>
+<footer>Pagina informativa non ufficiale del gruppo KM0 Basket Stars.</footer>
+<script>
+const P = {"s":"ikjesC7hqHN0aRvyN4aM8g==","i":"7E464CVovSXUpvwu","n":600000,"d":"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"};
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function unlock(pw) {
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveKey']);
+  const key = await crypto.subtle.deriveKey(
+    { name:'PBKDF2', salt:b64(P.s), iterations:P.n, hash:'SHA-256' },
+    base, { name:'AES-GCM', length:256 }, false, ['decrypt']);
+  const plain = await crypto.subtle.decrypt({ name:'AES-GCM', iv:b64(P.i) }, key, b64(P.d));
+  return new TextDecoder().decode(plain);
+}
+document.getElementById('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  const err = document.getElementById('err');
+  err.textContent = '';
+  try {
+    const html = await unlock(document.getElementById('pw').value);
+    document.getElementById('content').innerHTML = html;
+    document.getElementById('gate').style.display = 'none';
+  } catch (_) {
+    err.textContent = 'Password errata.';
+  }
+});
+</script>
+</body>
+</html>
